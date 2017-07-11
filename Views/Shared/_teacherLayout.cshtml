@@ -1,0 +1,138 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>_mylayout</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Scholastic a Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+Smartphone Compatible web template, free web designs for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+<!-- fonts -->
+<link href="//fonts.googleapis.com/css?family=Comfortaa:300,400,700" rel="stylesheet">
+<link href="//fonts.googleapis.com/css?family=Nunito:300,400,700" rel="stylesheet">
+<!-- /fonts -->
+<!-- css files -->
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" media="all" />
+<link href="~/Content/font-awesome.min.css" rel="stylesheet" type="text/css" media="all" />
+<link href="~/Content/footer-pic.css" rel="stylesheet" type="text/css" media="all"/>
+<link href="~/Content/jQuery.lightninBox.css" rel="stylesheet" type="text/css" media="all" />
+<link href="~/Content/staff.css" rel="stylesheet" type="text/css" media="all"/>
+<link href="~/Content/aos.css" rel="stylesheet prefetch" type="text/css" media="all" />
+<link href="~/Content/style.css" rel="stylesheet" type="text/css" media="all"/>
+<!-- /css files -->
+</head>
+<body>
+    <div class="navbar-wrapper">
+	<div class="container">
+		<nav class="navbar navbar-inverse navbar-static-top">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="/home/index"><h1>Scholastic</h1></a>
+			</div>
+			<div id="navbar" class="navbar-collapse collapse">
+				<ul class="nav navbar-nav cl-effect-18">
+					<li class="active"><a href="/home/index" class="page-scroll" data-hover="Home">Home</a></li>
+					<li><a href="/home/markAttendence" class="page-scroll" data-hover="Mark Attendence">Mark Attendence</a></li>
+					<li><a href="/home/viewAttendence" class="page-scroll" data-hover="View Attendence">View Attendence</a></li>
+					<li><a href="/home/updateMarks" class="page-scroll" data-hover="Update Marks">Update Marks</a></li>
+					<li><a href="/home/about" class="page-scroll" data-hover="About">About</a></li>
+					<li><a href="/Home/contact" class="page-scroll" data-hover="Contact">Contact</a></li>
+@*                    <li><a href="/Home/login_signup" class="page-scroll" data-hover="Login">Login</a></li>*@
+                    @{
+                        if (Session["typeo"] == "home" || Session["typeo"] == "student" || Session["typeo"] == "teacher" || Session["typeo"] == "admin")
+                        {
+                                <li><a href="/Home/logout" class="page-scroll" data-hover="Logout">Logout</a></li>
+                        }
+                        else 
+                        {
+                                <li><a href="/Home/login_signup" class="page-scroll" data-hover="Login">Login</a></li>
+                        }
+                    }
+				</ul>
+			</div>
+			
+        </nav>
+	</div>	
+</div>
+<!-- /navigation -->
+    <div>
+        @RenderBody();
+    </div>
+    
+		<div class="clearfix"></div>
+		<span class="line6"></span>
+    
+	<p class="copyright">© 2017 Scholastic. All Rights Reserved | Design by <b>mwaqaryb</b></p>
+		
+
+<!-- /footer section -->
+<!-- back to top -->
+<a href="#0" class="cd-top">Top</a>
+<!-- /back to top -->	
+<!-- js files -->
+<script src="~/Script/jquery.min.js"></script>
+<script src="~/Script/bootstrap.min.js"></script>
+<script src="~/Script/SmoothScroll.min.js"></script>
+<script src="~/Script/modernizr.min.js"></script> 
+<script src="~/Script/jquery.easing.min.js"></script>
+<script src="~/Script/grayscale.js"></script>
+<script src="~/Script/jqBootstrapValidation.js"></script>
+<script src="~/Script/contact_me.js"></script>
+<script src="~/Script/top.js"></script>
+<!-- js for banner section -->
+<script src="~/Script/bgfader.js"></script>
+<script>
+    var myBgFader = $('.header').bgfader([
+	'/images/banner1.jpg',
+	'/images/banner2.jpg',
+	'/images/banner3.jpg',
+	'/images/banner4.jpg',
+    ], {
+        'timeout': 3000,
+        'speed': 3000,
+        'opacity': 0.4
+    })
+    myBgFader.start()
+</script>
+<!-- /js for banner section -->
+<!-- js for parallax effect -->
+<script src="~/Script/jarallax.js"></script>
+<script type="text/javascript">
+    /* init Jarallax */
+    $('.jarallax').jarallax({
+        speed: 0.5,
+        imgWidth: 1366,
+        imgHeight: 768
+    })
+</script>
+<!-- /js for parallax effect -->
+<!-- js for footer pic lightbox -->
+<script src="~/Script/jquery.picEyes.js"></script>
+<script>
+    $(function () {
+        //picturesEyes($('li'));
+        $('ul.demo li').picEyes();
+    });
+</script>
+<!-- /js for footer pic lightbox -->
+<!-- js for portfolio lightbox -->
+<script src="~/Script/jQuery.lightninBox.js"></script>
+<script type="text/javascript">
+    $(".lightninBox").lightninBox();
+</script>
+<!-- /js for portfolio lightbox -->
+<script src="~/Script/aos.js"></script>
+<script src="~/Script/index.js"></script>
+<!-- /js files -->	
+</body>
+</html>

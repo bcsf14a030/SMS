@@ -1,0 +1,42 @@
+﻿@{
+    if(Session["typeo"] == "home")
+    {
+        Layout = "~/Views/Shared/_homeLayout.cshtml";
+    }
+    else if (Session["typeo"] == "teacher")
+    {
+        Layout = "~/Views/Shared/_teacherLayout.cshtml";
+    }
+    else if (Session["typeo"] == "student")
+    {
+        Layout = "~/Views/Shared/_studentLayout.cshtml";
+    }
+    else if (Session["typeo"] == "admin")
+    {
+        Layout = "~/Views/Shared/_adminLayout.cshtml";
+    }
+    else if(Session["typeo"] == null)
+    {
+        Layout = "~/Views/Shared/_homeLayout.cshtml";
+    }
+}
+
+<!-- banner section -->
+<section class="banner-w3ls">
+	<div class='header'>
+		<div class="container">
+			<div class="banner-agileits">
+                <h1>About Us</h1>
+				<p "rgb(255,255,255)">Courses are taught through an interactive approach with an emphasis on critical thinking skills. Our skilled and experienced teachers have their finger on the pulse of each students and know each individual student’s strengths and areas that require improvement. We maintain a ceiling on our class strength to ensure that all students enjoy personal attention in class. Our teachers use a combination of motivation, encouragement and confidence building to enable our students to achieve their personal best. All our teachers are available outside the classroom, on the school premises to extend any additional help or support the students might need.
+ 
+The school arranges extra lessons in most subjects for students facing difficulties. Unlike common practise in many schools BAY VIEW HIGH conducts classes after the “MOCK” exams and our faculty continues to teach up until the day of the Cambridge exams, to polish the students’ skills and give them the required confidence to perform at their best.</p>	
+				<ul class="social-icons1">
+					<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+					<li><a href="#"><i class="fa fa-youtube"></i></a></li>
+					<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+					<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+				</ul>
+			</div>
+		</div>
+	</div>	
+</section>
