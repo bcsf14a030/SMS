@@ -1,0 +1,25 @@
+﻿@model MvcApplication1.Models.teacher
+@{
+    
+        Layout = "~/Views/Shared/_adminLayout.cshtml";
+    
+}
+
+
+
+        <br><br><br><br>
+    <br><br><br><br>
+
+
+<form id="addTeacher-form" action="@Url.Action("Teachers", "Admin")" method="post" >
+   <p> Name:                 <input type="text" name="Name" placeholder="Name" required="required" /><br><br></p>
+    Father Name:  <input type="text" name="Father_Name" placeholder="Father Name" required="required" /><br><br>
+    Email: <input type="email" name="Email" placeholder="Email" required="required" /><br><br>
+ Address: <input type="text" name="Address" placeholder="Address" required="required" /><br><br>
+    CNIC: <input type="text" name="CNIC" placeholder="CNIC"  /><br><br>
+Phone Number: <input type="text" name="Phone" placeholder="Phone Number" required="required" /><br><br>
+
+    <br><br>
+    <input  type="submit" value="Add Teacher"  />
+
+    </form>

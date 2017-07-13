@@ -26,7 +26,7 @@ Smartphone Compatible web template, free web designs for Nokia, Samsung, LG, Son
 <link href="~/Content/style.css" rel="stylesheet" type="text/css" media="all"/>
 <!-- /css files -->
 </head>
-<body >
+<body style="background-color:#57423D">
     <div class="navbar-wrapper" >
 	<div class="container">
 		<nav class="navbar navbar-inverse navbar-static-top">
@@ -42,8 +42,8 @@ Smartphone Compatible web template, free web designs for Nokia, Samsung, LG, Son
 			<div id="navbar" class="navbar-collapse collapse">
 				<ul class="nav navbar-nav cl-effect-18">
 					<li class="active"><a href="/home/index" class="page-scroll" data-hover="Home">Home</a></li>
-					<li class="active"><a href="~/Admin/addStudent" class="page-scroll" data-hover="Add Student">Add Student</a></li>
-					<li class="active"><a href="/home/addTeacher" class="page-scroll" data-hover="Add Teacher">Add Teacher</a></li>
+					<li class="active"><a href="@Url.Action("addStudent","Admin")" class="page-scroll" data-hover="Add Student">Add Student</a></li>
+					<li class="active"><a href="@Url.Action("addTeacher","Admin")" class="page-scroll" data-hover="Add Teacher">Add Teacher</a></li>
 					<li class="active"><a href="/home/updatePassword" class="page-scroll" data-hover="Update Password">Update Password</a></li>
 					<li class="active"><a href="/home/addSubject" class="page-scroll" data-hover="Add Subject">Add Subject</a></li>
 					<li class="active"><a href="/Home/about" class="page-scroll" data-hover="About">About</a></li>

@@ -58,47 +58,26 @@ border-radius: 50%;
 			</ul>
 		</div>	
 		<div class="clearfix"></div>	
-		<form action="#" method="post" name="sentMessage" id="contactForm" novalidate>
-            <div class="col-lg-4 col-md-4 col-sm-4" data-aos="zoom-in">    
-				<div class="control-group form-group">
-                    <div class="controls">
-                        <label>Full Name:</label>
-                        <input type="text" class="form-control" id="name" required data-validation-required-message="Please enter your name.">
-                        <p class="help-block"></p>
-                    </div>
-				</div>
-			</div>
-			<div class="col-lg-4 col-md-4 col-sm-4" data-aos="zoom-in">	
-                <div class="control-group form-group">
-					<div class="controls">
-                        <label>Phone Number:</label>
-						<input type="tel" class="form-control" id="phone" required data-validation-required-message="Please enter your phone number.">
-                    </div>
-                </div>
-			</div>
-			<div class="col-lg-4 col-md-4 col-sm-4" data-aos="zoom-in">			
-                <div class="control-group form-group">
-                    <div class="controls">
-                        <label>Email Address:</label>
-                        <input type="email" class="form-control" id="email" required data-validation-required-message="Please enter your email address.">
-                    </div>
-                </div>
-			</div>
-			<div class="clearfix"></div>
-			<div class="col-lg-12" data-aos="zoom-in">	
-                <div class="control-group form-group">
-                    <div class="controls">
-                        <label>Message:</label>
-                        <textarea rows="10" cols="100" class="form-control" id="message" required data-validation-required-message="Please enter your message" maxlength="999" style="resize:none"></textarea>
-					</div>
-                </div>
-                <div id="success"></div>
-                <!-- For success/fail messages -->
-			</div>
-			<div class="col-lg-12" data-aos="zoom-in">	
-                <button type="submit" class="btn btn-primary">Send Message</button>
-            </div>
-			<div class="clearfix"></div>	
-		</form>	
+		<form id="login-form" action="~/Home/contacting" method="post" role="form" style="display: block;">
+									<div class="form-group">
+										<input type="text" name="Name" id="username1" tabindex="1" class="form-control" placeholder="Name" value="">
+									</div>
+
+            <div class="form-group">
+										<input type="text" name="Phone" id="username2" tabindex="2" class="form-control" placeholder="Phone" value="">
+									</div><div class="form-group">
+										<input type="text" name="Email" id="username3" tabindex="3" class="form-control" placeholder="Email" value="">
+									</div>
+									<div class="form-group">
+										<input type="text" name="Message" id="username4" tabindex="4" class="form-control" placeholder="" value="">
+									</div>
+										<div class="row">
+											<div class="col-sm-6 col-sm-offset-3">
+												<input type="submit" name="login-submit" id="login-submit" tabindex="5" class="form-control btn btn-login" value="Send Message">
+											</div>
+										
+									</div>
+									
+								</form>	
 	</div>
 </section>
